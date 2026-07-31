@@ -110,23 +110,19 @@ body::before {
 }
 
 /* Logo */
-.logo { display: flex; flex-direction: column; line-height: 1; }
-.logo .mark {
-  font-family: var(--font-display);
-  font-size: 1.95rem;
-  letter-spacing: .04em;
-  color: var(--white);
-  text-transform: uppercase;
+.logo { display: flex; align-items: center; line-height: 1; }
+.logo-img {
+  height: 30px;
+  width: auto;
+  display: block;
+  transition: height .4s var(--ease);
 }
-.logo .mark b { color: var(--red); font-weight: inherit; }
-.logo .tag {
-  font-family: var(--font-head);
-  font-size: .52rem;
-  font-weight: 700;
-  letter-spacing: .42em;
-  color: var(--muted);
-  text-transform: uppercase;
-  margin-top: 3px;
+.site-header.scrolled .logo-img { height: 25px; }
+.logo-full {
+  height: clamp(52px, 7vw, 72px);
+  width: auto;
+  margin: 0 auto 30px;
+  opacity: .96;
 }
 
 /* Nav */
@@ -741,6 +737,16 @@ textarea { resize: vertical; min-height: 110px; }
 .consent a { color: var(--gold); text-decoration: underline; }
 form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padding: 16px; }
 .form-note { text-align:center; color: var(--faint); font-size: .8rem; margin-top: 16px; }
+
+/* Fillout embed wrapper */
+.fillout-embed {
+  background: linear-gradient(180deg, var(--panel), var(--ink));
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 14px;
+  overflow: hidden;
+}
+.fillout-embed > div { border-radius: 12px; overflow: hidden; }
 
 .form-success {
   display: none;

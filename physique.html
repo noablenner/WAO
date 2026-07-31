@@ -9,14 +9,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
 
   <header class="site-header">
     <a href="index.html" class="logo" aria-label="WAO — We Are One">
-      <span class="mark">W<b>A</b>O</span>
-      <span class="tag">We Are One</span>
+      <img class="logo-img" src="assets/logo-wao.png" alt="WAO — We Are One" />
     </a>
     <nav class="nav" aria-label="Navigation">
       <a href="index.html#concept">Le concept</a>
@@ -62,79 +64,8 @@
         </ul>
       </aside>
 
-      <div class="reveal in d1">
-        <form class="wao-form" data-form="physique" novalidate>
-          <input type="hidden" name="_parcours" value="Transformer mon physique" />
-          <div class="field row">
-            <div class="field">
-              <label for="prenom">Prénom <span class="req">*</span></label>
-              <input id="prenom" name="prenom" type="text" placeholder="Ton prénom" required />
-            </div>
-            <div class="field">
-              <label for="nom">Nom <span class="req">*</span></label>
-              <input id="nom" name="nom" type="text" placeholder="Ton nom" required />
-            </div>
-          </div>
-
-          <div class="field row">
-            <div class="field">
-              <label for="email">E-mail <span class="req">*</span></label>
-              <input id="email" name="email" type="email" placeholder="toi@exemple.com" required />
-            </div>
-            <div class="field">
-              <label for="tel">Téléphone <span class="req">*</span></label>
-              <input id="tel" name="telephone" type="tel" placeholder="06 12 34 56 78" required />
-            </div>
-          </div>
-
-          <div class="field row">
-            <div class="field">
-              <label for="age">Ton âge</label>
-              <input id="age" name="age" type="number" min="14" max="99" placeholder="Ex. 34" />
-            </div>
-            <div class="field">
-              <label for="objectif">Ton objectif principal <span class="req">*</span></label>
-              <select id="objectif" name="objectif" required>
-                <option value="" disabled selected>Choisir…</option>
-                <option>Perdre du poids</option>
-                <option>Prendre du muscle / me tonifier</option>
-                <option>Retrouver de l'énergie</option>
-                <option>Améliorer ma nutrition</option>
-                <option>Me remettre au sport</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="echeance">Sous quel délai veux-tu voir des résultats ?</label>
-            <select id="echeance" name="echeance">
-              <option value="" disabled selected>Choisir…</option>
-              <option>Moins de 30 jours</option>
-              <option>En moins de 100 jours</option>
-              <option>Pas de délai précis, je veux du durable</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="message">Un mot sur ta situation (facultatif)</label>
-            <textarea id="message" name="message" placeholder="Où tu en es, ce qui te freine, ce que tu veux atteindre…"></textarea>
-          </div>
-
-          <label class="consent">
-            <input type="checkbox" name="consentement" required />
-            <span>J'accepte d'être recontacté(e) au sujet de ma demande et j'ai lu la
-              <a href="#">politique de confidentialité</a>. <span class="req">*</span></span>
-          </label>
-
-          <button type="submit" class="btn">Je lance mon changement</button>
-          <p class="form-note">Réponse sous 48 h · Aucune donnée revendue.</p>
-        </form>
-
-        <div class="form-success">
-          <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
-          <h3>C'est parti ! 🔥</h3>
-          <p>Merci, ta demande est bien reçue. On revient vers toi très vite pour construire ta transformation.</p>
-        </div>
+      <div class="reveal in d1 fillout-embed">
+        <div style="width:100%;min-height:640px;" data-fillout-id="wJxnXDSZrEus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
       </div>
     </div>
   </section>
@@ -149,6 +80,6 @@
   </footer>
 
   <script src="assets/main.js"></script>
-  <script src="assets/form.js"></script>
+  <script src="https://server.fillout.com/embed/v1/"></script>
 </body>
 </html>
