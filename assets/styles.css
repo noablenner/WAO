@@ -212,7 +212,7 @@ body::before {
   font-weight: 400;
   text-transform: uppercase;
   font-size: clamp(2.7rem, 6.6vw, 5.4rem);
-  line-height: .96;
+  line-height: 1.08;
   letter-spacing: .005em;
   color: var(--white);
 }
@@ -635,7 +635,7 @@ body::before {
    FORM PAGES
    ============================================================ */
 .form-hero {
-  padding: 150px 0 40px;
+  padding: 150px 0 clamp(70px, 9vw, 120px);
   position: relative;
   overflow: hidden;
 }
@@ -658,20 +658,31 @@ body::before {
   font-weight: 400;
   text-transform: uppercase;
   font-size: clamp(2.4rem, 6vw, 4.6rem);
-  line-height: .96;
+  line-height: 1.06;
   color: #fff;
   max-width: 16ch;
 }
 .form-hero.body h1 .hl { color: var(--red); }
 .form-hero.life h1 .hl { color: var(--gold); }
-.form-hero .lede { color: var(--cream); font-size: 1.15rem; max-width: 52ch; margin-top: 22px; }
+.form-hero .lede { color: var(--cream); font-size: 1.15rem; max-width: 46ch; margin: 20px 0 0; }
 
-.form-layout {
+/* Texte à gauche, formulaire à droite (haut aligné sur la 1re ligne du titre) */
+.form-split {
   display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: clamp(30px, 5vw, 70px);
-  padding-bottom: clamp(70px, 9vw, 130px);
+  grid-template-columns: 1.05fr .95fr;
+  gap: clamp(28px, 5vw, 62px);
   align-items: start;
+  margin-top: 6px;
+}
+.form-lead { min-width: 0; }
+.form-lead .form-side { margin-top: 42px; }
+.form-embed { min-width: 0; }
+.form-embed > div {
+  margin-inline: auto;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,.75);
 }
 .form-side .eyebrow { color: var(--gold); }
 .form-side ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; }
@@ -738,15 +749,6 @@ textarea { resize: vertical; min-height: 110px; }
 form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padding: 16px; }
 .form-note { text-align:center; color: var(--faint); font-size: .8rem; margin-top: 16px; }
 
-/* Fillout embed wrapper */
-.fillout-embed {
-  background: linear-gradient(180deg, var(--panel), var(--ink));
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 14px;
-  overflow: hidden;
-}
-.fillout-embed > div { border-radius: 12px; overflow: hidden; }
 
 .form-success {
   display: none;
@@ -785,8 +787,9 @@ form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padd
   .pascal-photo { max-width: 460px; }
   .cards { grid-template-columns: 1fr; }
   .section-intro { grid-template-columns: 1fr; align-items: start; gap: 18px; }
-  .form-layout { grid-template-columns: 1fr; }
-  .form-side { order: 2; }
+  .form-split { grid-template-columns: 1fr; }
+  .form-lead .form-side { margin-top: 30px; }
+  .form-embed > div { width: 100% !important; }
 }
 @media (max-width: 760px) {
   .nav { display: none; }
