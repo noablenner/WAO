@@ -784,7 +784,7 @@ body::before {
   display: grid;
   grid-template-columns: 1.15fr .85fr;
   gap: clamp(40px, 6vw, 90px);
-  align-items: center;
+  align-items: start;
 }
 
 .hero h1 {
@@ -1227,9 +1227,9 @@ body::before {
 .form-hero.life::after { background: radial-gradient(circle, rgba(201,162,75,.24), transparent 62%); }
 .form-hero .wrap { position: relative; z-index: 2; }
 .back-link {
-  display:inline-flex; align-items:center; gap:8px;
+  display:flex; width:fit-content; align-items:center; gap:8px;
   font-family:var(--font-head); font-weight:600; font-size:.86rem;
-  color: var(--muted); margin-bottom: 30px;
+  color: var(--muted); margin-bottom: 26px;
   transition: color .2s var(--ease), gap .2s var(--ease);
 }
 .back-link:hover { color: #fff; gap: 12px; }
