@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transformer mon physique — WAO</title>
+  <meta name="description" content="Ton nouveau corps en moins de 100 jours. Laisse-nous tes infos, on te recontacte pour bâtir ton programme." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="WAO — We Are One">
+      <span class="mark">W<b>A</b>O</span>
+      <span class="tag">We Are One</span>
+    </a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="index.html#concept">Le concept</a>
+      <a href="index.html#pascal">Pascal</a>
+      <a href="lifestyle.html">Changer de vie</a>
+      <a href="index.html#contact" class="btn header-cta">Nous contacter</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <section class="form-hero body">
+    <div class="wrap">
+      <a href="index.html#choix" class="back-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        Retour
+      </a>
+      <p class="eyebrow reveal in" style="color:var(--red-hot);">Transformer mon physique</p>
+      <h1 class="reveal in">Ton <span class="hl">nouveau corps</span> en moins de 100 jours</h1>
+      <p class="lede reveal in d1">
+        Reprends le contrôle de ta forme, de ton énergie et de ta confiance.
+        Donne-moi 3 minutes : laisse-moi tes infos et on construit ensemble ton changement.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="form-layout">
+      <aside class="form-side reveal in">
+        <p class="eyebrow">Ce que tu obtiens</p>
+        <ul>
+          <li>
+            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span><b>Un bilan personnalisé</b>De tes objectifs et de ta situation actuelle.</span>
+          </li>
+          <li>
+            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span><b>Un accompagnement</b>Nutrition, énergie et suivi adaptés à ton quotidien.</span>
+          </li>
+          <li>
+            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span><b>Zéro engagement</b>Un premier échange sans pression, pour voir si on est faits pour avancer ensemble.</span>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="reveal in d1">
+        <form class="wao-form" data-form="physique" novalidate>
+          <input type="hidden" name="_parcours" value="Transformer mon physique" />
+          <div class="field row">
+            <div class="field">
+              <label for="prenom">Prénom <span class="req">*</span></label>
+              <input id="prenom" name="prenom" type="text" placeholder="Ton prénom" required />
+            </div>
+            <div class="field">
+              <label for="nom">Nom <span class="req">*</span></label>
+              <input id="nom" name="nom" type="text" placeholder="Ton nom" required />
+            </div>
+          </div>
+
+          <div class="field row">
+            <div class="field">
+              <label for="email">E-mail <span class="req">*</span></label>
+              <input id="email" name="email" type="email" placeholder="toi@exemple.com" required />
+            </div>
+            <div class="field">
+              <label for="tel">Téléphone <span class="req">*</span></label>
+              <input id="tel" name="telephone" type="tel" placeholder="06 12 34 56 78" required />
+            </div>
+          </div>
+
+          <div class="field row">
+            <div class="field">
+              <label for="age">Ton âge</label>
+              <input id="age" name="age" type="number" min="14" max="99" placeholder="Ex. 34" />
+            </div>
+            <div class="field">
+              <label for="objectif">Ton objectif principal <span class="req">*</span></label>
+              <select id="objectif" name="objectif" required>
+                <option value="" disabled selected>Choisir…</option>
+                <option>Perdre du poids</option>
+                <option>Prendre du muscle / me tonifier</option>
+                <option>Retrouver de l'énergie</option>
+                <option>Améliorer ma nutrition</option>
+                <option>Me remettre au sport</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="echeance">Sous quel délai veux-tu voir des résultats ?</label>
+            <select id="echeance" name="echeance">
+              <option value="" disabled selected>Choisir…</option>
+              <option>Moins de 30 jours</option>
+              <option>En moins de 100 jours</option>
+              <option>Pas de délai précis, je veux du durable</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Un mot sur ta situation (facultatif)</label>
+            <textarea id="message" name="message" placeholder="Où tu en es, ce qui te freine, ce que tu veux atteindre…"></textarea>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="consentement" required />
+            <span>J'accepte d'être recontacté(e) au sujet de ma demande et j'ai lu la
+              <a href="#">politique de confidentialité</a>. <span class="req">*</span></span>
+          </label>
+
+          <button type="submit" class="btn">Je lance mon changement</button>
+          <p class="form-note">Réponse sous 48 h · Aucune donnée revendue.</p>
+        </form>
+
+        <div class="form-success">
+          <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <h3>C'est parti ! 🔥</h3>
+          <p>Merci, ta demande est bien reçue. On revient vers toi très vite pour construire ta transformation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section footer">
+    <div class="wrap">
+      <div class="legal" style="border:0;">
+        <span>© <span data-year>2026</span> WAO — We Are One</span>
+        <a href="index.html">Retour à l'accueil</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+  <script src="assets/form.js"></script>
+</body>
+</html>
