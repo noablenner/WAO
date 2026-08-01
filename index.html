@@ -23,10 +23,9 @@
     </a>
 
     <nav class="nav" aria-label="Navigation principale">
-      <a href="#concept">Le concept</a>
-      <a href="#pascal">Pascal</a>
       <a href="#video">La vidéo</a>
       <a href="#choix">Rejoindre</a>
+      <a href="#pascal">Pascal</a>
       <a href="#contact" class="btn header-cta">Nous contacter</a>
     </nav>
 
@@ -35,7 +34,20 @@
     </button>
   </header>
 
-  <!-- ============ HERO ============ -->
+  <!-- ============ VIDEO ============ -->
+  <section class="section video-sec" id="video">
+    <div class="wrap">
+      <div class="video-frame reveal" role="button" tabindex="0" aria-label="Lire la vidéo">
+        <img src="assets/pascal.jpg" alt="" />
+        <span class="play-ring" aria-hidden="true"></span>
+        <span class="play" aria-hidden="true"></span>
+      </div>
+      <h2 class="reveal d1">Forcer votre destin</h2>
+      <p class="sub reveal d2">Entreprendre et réussir, c'est tout un programme.</p>
+    </div>
+  </section>
+
+  <!-- ============ HERO / TEXTE ============ -->
   <section class="hero">
     <div class="wrap">
       <div class="hero-grid">
@@ -52,7 +64,7 @@
           </p>
           <div class="hero-cta reveal d2">
             <a href="#choix" class="btn">Je veux changer</a>
-            <a href="#concept" class="btn ghost">Découvrir le concept</a>
+            <a href="#pascal" class="btn ghost">Rencontrer Pascal</a>
           </div>
         </div>
 
@@ -72,70 +84,40 @@
         </div>
       </div>
     </div>
-    <div class="scroll-cue"><span>Défiler</span></div>
   </section>
 
-  <!-- ============ CONCEPT / AVANTAGES ============ -->
-  <section class="section" id="concept">
+  <!-- ============ CHOIX (2 chemins) ============ -->
+  <section class="section choice" id="choix">
     <div class="wrap">
-      <p class="eyebrow reveal">01 — Le concept</p>
-      <div class="section-intro">
-        <h2 class="lead-head reveal">Bien plus qu'un revenu : une <em>école de la vie</em> et de l'entrepreneuriat.</h2>
+      <div class="choice-head">
+        <p class="eyebrow reveal" style="justify-content:center;">01 — À toi de jouer</p>
+        <h2 class="reveal">Quel changement veux-tu <em>forcer&nbsp;?</em></h2>
         <p class="reveal d1">
-          Le marketing de réseau, c'est bâtir ton activité à ton rythme, entouré d'une communauté
-          qui grandit avec toi. Tu développes ton indépendance, tu apprends à te dépasser, et tu
-          transformes ta santé et celle des autres en véritable aventure humaine.
+          Deux chemins, une même aventure. Choisis celui qui te ressemble aujourd'hui —
+          tu remplis un court formulaire et on revient vers toi.
         </p>
       </div>
 
-      <div class="cards">
-        <article class="feature reveal">
-          <div class="ic" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20v-6M4 8V4M12 20v-9M12 5V4M20 20v-4M20 10V4"/><path d="M2 14h4M10 11h4M18 16h4"/></svg>
-          </div>
-          <h3>Liberté &amp; flexibilité</h3>
-          <p>Tu choisis tes horaires, ton lieu et ton rythme. Un modèle accessible depuis chez soi, compatible avec ta vie actuelle.</p>
-        </article>
+      <div class="paths">
+        <a href="physique.html" class="path body reveal">
+          <span class="idx">01</span>
+          <span class="kicker">Transformer mon physique</span>
+          <h3>Ton nouveau corps en moins de 100 jours</h3>
+          <p>Retrouver la forme, l'énergie, la confiance. Reprends le contrôle de ta santé avec un accompagnement sur mesure.</p>
+          <span class="go">Je veux changer mon physique
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </a>
 
-        <article class="feature reveal d1">
-          <div class="ic" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v5h-5"/></svg>
-          </div>
-          <h3>Revenus évolutifs</h3>
-          <p>D'un revenu complémentaire à une véritable carrière. Un modèle exponentiel où tes efforts se cumulent dans le temps.</p>
-        </article>
-
-        <article class="feature reveal d2">
-          <div class="ic" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-3-3.87M9 21v-2a4 4 0 0 1 3-3.87"/><circle cx="9" cy="7" r="4"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>Une communauté</h3>
-          <p>Tu n'avances jamais seul. Formation, accompagnement, entraide : on grandit ensemble, on gagne ensemble.</p>
-        </article>
-
-        <article class="feature reveal">
-          <div class="ic" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/><path d="M9 21h6M10 17v4M14 17v4"/></svg>
-          </div>
-          <h3>Bien-être &amp; longévité</h3>
-          <p>Des produits sur un marché en pleine explosion : nutrition, gestion du poids, sport et énergie au quotidien.</p>
-        </article>
-
-        <article class="feature reveal d1">
-          <div class="ic" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Une marque solide</h3>
-          <p>Un leader mondial reconnu, une catégorie de produits qui domine son marché et une méthode éprouvée depuis des décennies.</p>
-        </article>
-
-        <article class="feature reveal d2">
-          <div class="ic" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
-          </div>
-          <h3>Te dépasser</h3>
-          <p>Oser, tester, recommencer. Ici, tu apprends sur toi autant que sur le business. Le vrai retour sur investissement, c'est toi.</p>
-        </article>
+        <a href="lifestyle.html" class="path life reveal d1">
+          <span class="idx">02</span>
+          <span class="kicker">Transformer ma vie</span>
+          <h3>Change ton destin, la belle vie t'attend</h3>
+          <p>Plus de liberté, plus de revenus, un nouveau style de vie. Deviens entrepreneur et bâtis quelque chose qui t'appartient.</p>
+          <span class="go">Je veux changer de vie
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </a>
       </div>
     </div>
   </section>
@@ -172,55 +154,6 @@
 
           <p class="hashtag reveal d3">#FORCE<b>TON</b>DESTIN</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ VIDEO ============ -->
-  <section class="section video-sec" id="video">
-    <div class="wrap">
-      <div class="video-frame reveal" role="button" tabindex="0" aria-label="Lire la vidéo">
-        <img src="assets/pascal.jpg" alt="" />
-        <span class="play-ring" aria-hidden="true"></span>
-        <span class="play" aria-hidden="true"></span>
-      </div>
-      <h2 class="reveal d1">Forcer votre destin</h2>
-      <p class="sub reveal d2">Entreprendre et réussir, c'est tout un programme.</p>
-    </div>
-  </section>
-
-  <!-- ============ CHOIX (2 chemins) ============ -->
-  <section class="section choice" id="choix">
-    <div class="wrap">
-      <div class="choice-head">
-        <p class="eyebrow reveal" style="justify-content:center;">03 — À toi de jouer</p>
-        <h2 class="reveal">Quel changement veux-tu <em>forcer&nbsp;?</em></h2>
-        <p class="reveal d1">
-          Deux chemins, une même aventure. Choisis celui qui te ressemble aujourd'hui —
-          tu remplis un court formulaire et on revient vers toi.
-        </p>
-      </div>
-
-      <div class="paths">
-        <a href="physique.html" class="path body reveal">
-          <span class="idx">01</span>
-          <span class="kicker">Transformer mon physique</span>
-          <h3>Ton nouveau corps en moins de 100 jours</h3>
-          <p>Retrouver la forme, l'énergie, la confiance. Reprends le contrôle de ta santé avec un accompagnement sur mesure.</p>
-          <span class="go">Je veux changer mon physique
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </span>
-        </a>
-
-        <a href="lifestyle.html" class="path life reveal d1">
-          <span class="idx">02</span>
-          <span class="kicker">Transformer ma vie</span>
-          <h3>Change ton destin, la belle vie t'attend</h3>
-          <p>Plus de liberté, plus de revenus, un nouveau style de vie. Deviens entrepreneur et bâtis quelque chose qui t'appartient.</p>
-          <span class="go">Je veux changer de vie
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </span>
-        </a>
       </div>
     </div>
   </section>
