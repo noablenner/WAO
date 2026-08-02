@@ -945,14 +945,16 @@ form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padd
 
 /* ---------- SCREEN 3 : cartes de choix illustrées ---------- */
 .choice2-sub { text-align: center; color: var(--muted); max-width: 60ch; margin: 14px auto 52px; }
-.paths2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.path2 { position: relative; border-radius: 20px; overflow: hidden; border: 1px solid var(--line); min-height: 460px; display: flex; transition: transform .4s var(--ease), border-color .4s var(--ease); }
-.path2-media { position: absolute; inset: 0; z-index: 0; background-size: cover; background-position: center; transition: transform .8s var(--ease); }
-.path2.body .path2-media { background-image: radial-gradient(85% 75% at 82% 18%, rgba(228,0,43,.42), transparent 60%), linear-gradient(140deg, #1c060b, #0a0406 62%); }
-.path2.life .path2-media { background-image: radial-gradient(85% 75% at 82% 18%, rgba(228,0,43,.34), transparent 60%), linear-gradient(140deg, #17110c, #080706 62%); }
-.path2::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(8,8,10,.92) 0%, rgba(8,8,10,.6) 52%, rgba(8,8,10,.32) 100%); }
-.path2:hover { transform: translateY(-8px); border-color: rgba(228,0,43,.6); }
-.path2:hover .path2-media { transform: scale(1.06); }
+.paths2 { display: flex; gap: 24px; align-items: stretch; }
+.path2 { position: relative; flex: 1 1 0; min-width: 0; border-radius: 20px; overflow: hidden; border: 1px solid var(--line); min-height: 490px; display: flex; transition: flex-grow .55s var(--ease), border-color .4s var(--ease); }
+.path2-media { position: absolute; inset: 0; z-index: 0; background-size: cover; background-position: 70% 28%; transition: transform .8s var(--ease); }
+.path2.body .path2-media { background-image: radial-gradient(70% 62% at 82% 20%, rgba(228,0,43,.30), transparent 60%), url("choice-corps.jpg"); }
+.path2.life .path2-media { background-image: radial-gradient(70% 62% at 82% 20%, rgba(228,0,43,.26), transparent 60%), url("choice-vie.jpg"); }
+.path2::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(8,8,10,.94) 0%, rgba(8,8,10,.62) 52%, rgba(8,8,10,.3) 100%); }
+/* Survol (ordinateur) : la carte survolée s'élargit, l'autre se réduit */
+.paths2:hover .path2 { flex-grow: .82; }
+.paths2 .path2:hover { flex-grow: 1.5; border-color: rgba(228,0,43,.6); }
+.path2:hover .path2-media { transform: scale(1.05); }
 .path2-body { position: relative; z-index: 2; padding: clamp(28px, 3vw, 40px); display: flex; flex-direction: column; justify-content: flex-end; }
 .path2-ic { width: 58px; height: 58px; border-radius: 50%; background: var(--red); display: grid; place-items: center; margin-bottom: 22px; box-shadow: 0 8px 24px -8px rgba(228,0,43,.8); }
 .path2-ic svg { width: 26px; height: 26px; color: #fff; }
@@ -972,7 +974,9 @@ form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padd
   .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 26px 0; }
   .hstat:nth-child(4) { border-left: 0; padding-left: 0; }
   .market-grid { grid-template-columns: 1fr; }
-  .paths2 { grid-template-columns: 1fr; }
+  .paths2 { flex-direction: column; }
+  .paths2:hover .path2, .paths2 .path2:hover { flex-grow: 0; }
+  .path2 { flex: 0 0 auto; }
   .hero-grid { grid-template-columns: 1fr; gap: 48px; }
   .stats { grid-template-columns: repeat(3, 1fr); }
   .pascal-grid { grid-template-columns: 1fr; }
