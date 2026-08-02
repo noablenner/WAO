@@ -88,20 +88,21 @@
   /* ----- Video ----- */
   // Pour activer la vidéo : renseigne l'ID YouTube ci-dessous.
   var YOUTUBE_ID = ""; // ex : "dQw4w9WgXcQ"
-  var vframe = document.querySelector(".video-frame");
-  if (vframe) {
-    vframe.addEventListener("click", function () {
+  var playBtn = document.querySelector(".hero-play, .video-frame");
+  if (playBtn) {
+    playBtn.addEventListener("click", function () {
       if (!YOUTUBE_ID) {
         alert("La vidéo sera bientôt disponible.");
         return;
       }
+      var host = document.querySelector(".hero-cine-bg") || playBtn;
       var iframe = document.createElement("iframe");
       iframe.setAttribute("src", "https://www.youtube-nocookie.com/embed/" + YOUTUBE_ID + "?autoplay=1&rel=0");
       iframe.setAttribute("allow", "autoplay; encrypted-media; fullscreen");
       iframe.setAttribute("allowfullscreen", "");
       iframe.style.cssText = "position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5;";
-      vframe.innerHTML = "";
-      vframe.appendChild(iframe);
+      host.innerHTML = "";
+      host.appendChild(iframe);
     });
   }
 
