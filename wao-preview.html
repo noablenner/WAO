@@ -170,6 +170,47 @@
     </div>
   </div>
 
+  <!-- ============ MANIFESTE (juste avant le double choix) ============ -->
+  <section class="section manifesto" id="manifeste">
+    <div class="wrap">
+      <div class="manifesto-intro">
+        <h2 class="manifesto-title grunge reveal">Alone we survive.<br /><span class="red">Together we scale.</span></h2>
+        <p class="quote2 reveal d1">« Seul on survit, ensemble,<br />ton business se démultiplie. »</p>
+        <div class="redline reveal d1"></div>
+      </div>
+
+      <h3 class="manifesto-head grunge reveal">Je ne peux pas<br />parler à tout le monde.</h3>
+      <p class="manifesto-lede reveal d1">
+        Produit ou activité,<br />je ne peux pas te garantir ton succès.<br />
+        Par contre, <b>je peux te garantir que&nbsp;:</b>
+      </p>
+
+      <ul class="guarantees reveal d1">
+        <li>
+          <h4>En quarante ans, je n'ai jamais vendu de rêve.</h4>
+          <p>Le prix de la liberté, c'est la passion, l'engagement, la responsabilité et beaucoup de fun.</p>
+        </li>
+        <li>
+          <h4>Je ne travaillerai qu'avec des personnes entreprenantes, exigeantes avec elles-mêmes.</h4>
+        </li>
+        <li>
+          <h4>Si je pense que cette voie, produit ou activité n'est pas faite pour toi, tu le verras immédiatement dans les entretiens découverte.</h4>
+        </li>
+        <li>
+          <h4>Rassure-toi, je n'ai rien à vendre : ni formation, ni conseil, ni info-produit.</h4>
+        </li>
+      </ul>
+
+      <div class="manifesto-cta reveal">
+        <span class="arrow" aria-hidden="true"><svg viewBox="0 0 60 92" fill="currentColor"><path d="M22 0h16v56h18L30 92 4 56h18z"/></svg></span>
+        <p>Tu es peut-être au point de prendre<br />la meilleure décision de ta vie<br />avec un simple entretien découverte.</p>
+        <span class="arrow" aria-hidden="true"><svg viewBox="0 0 60 92" fill="currentColor"><path d="M22 0h16v56h18L30 92 4 56h18z"/></svg></span>
+      </div>
+
+      <!-- Emplacement futur : photo de Pascal en haut à droite de cette section -->
+    </div>
+  </section>
+
   <!-- ============ SCREEN 3 — LE DOUBLE CHOIX ============ -->
   <section class="section choice" id="choix">
     <div class="wrap">
@@ -1553,6 +1594,48 @@ form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padd
 .path2 p { color: rgba(255,255,255,.82); margin: 0 0 26px; max-width: 30ch; }
 .path2 .btn { align-self: flex-start; }
 
+/* ---------- Manifeste (juste avant le double choix) ---------- */
+.manifesto { position: relative; overflow: hidden; }
+.manifesto::after { /* halo rouge : emplacement futur de la photo de Pascal (haut droite) */
+  content: ""; position: absolute; top: -8%; right: -6%; width: 46vw; height: 46vw;
+  background: radial-gradient(circle, rgba(228,0,43,.16), transparent 62%);
+  filter: blur(12px); pointer-events: none; z-index: 0;
+}
+.manifesto .wrap { position: relative; z-index: 1; }
+.manifesto-intro { max-width: 62%; }
+.manifesto-title {
+  font-family: var(--font-display); font-weight: 400; text-transform: uppercase;
+  font-size: clamp(2.6rem, 6vw, 5rem); line-height: .95; letter-spacing: .01em;
+}
+.quote2 { font-style: italic; color: var(--cream); font-size: clamp(1.1rem, 1.8vw, 1.5rem); line-height: 1.35; margin: 24px 0 0; }
+.redline { width: 92px; height: 2px; background: linear-gradient(90deg, var(--red), transparent); margin: 26px 0 0; }
+.manifesto-head {
+  font-family: var(--font-display); font-weight: 400; text-transform: uppercase;
+  font-size: clamp(1.9rem, 4vw, 3.3rem); line-height: 1.0; margin: 44px 0 0;
+  padding-bottom: 22px; border-bottom: 1px solid rgba(228,0,43,.3); max-width: 68%;
+}
+.manifesto-lede { color: var(--muted); margin: 24px 0 0; max-width: 48ch; }
+.manifesto-lede b { color: #fff; font-weight: 700; }
+.guarantees { list-style: none; padding: 0; margin: 34px 0 0; max-width: 62ch; }
+.guarantees li { padding: 22px 0; border-top: 1px solid rgba(228,0,43,.22); }
+.guarantees li:first-child { border-top: 0; padding-top: 0; }
+.guarantees h4 {
+  font-family: var(--font-head); font-weight: 800; text-transform: uppercase;
+  font-size: clamp(1rem, 1.5vw, 1.3rem); line-height: 1.2; color: #fff; letter-spacing: .01em;
+}
+.guarantees p { color: var(--muted); margin: 10px 0 0; font-size: .95rem; line-height: 1.5; }
+.manifesto-cta {
+  display: flex; align-items: center; justify-content: center;
+  gap: clamp(20px, 5vw, 72px); margin: 56px auto 0; text-align: center;
+}
+.manifesto-cta p {
+  font-family: var(--font-display); text-transform: uppercase; font-weight: 400;
+  font-size: clamp(1.2rem, 2.4vw, 2rem); line-height: 1.12; color: #fff; margin: 0;
+}
+.manifesto-cta .arrow { color: var(--red); flex: none; filter: drop-shadow(0 6px 16px rgba(228,0,43,.5)); }
+.manifesto-cta .arrow svg { width: clamp(46px, 6vw, 84px); height: auto; display: block; }
+.manifesto-cta .arrow:last-child { transform: scaleX(-1); }
+
 /* ============================================================
    Responsive
    ============================================================ */
@@ -1564,6 +1647,8 @@ form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padd
   .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 26px 0; }
   .hstat:nth-child(4) { border-left: 0; padding-left: 0; }
   .market-grid { grid-template-columns: 1fr; }
+  .manifesto-intro { max-width: 82%; }
+  .manifesto-head { max-width: 90%; }
   .paths2 { flex-direction: column; }
   .paths2:hover .path2, .paths2 .path2:hover { flex-grow: 0; }
   .path2 { flex: 0 0 auto; }
@@ -1615,6 +1700,10 @@ form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padd
   .paths2 { grid-template-columns: 1fr; }
   .stats { grid-template-columns: 1fr; }
   .pascal-stats { grid-template-columns: repeat(2, 1fr); }
+  .manifesto-intro, .manifesto-head { max-width: 100%; }
+  .manifesto-cta { flex-direction: column; gap: 18px; margin-top: 44px; }
+  .manifesto-cta .arrow:first-child { display: none; }
+  .manifesto-cta .arrow:last-child { order: 3; transform: none; }
   .field.row { grid-template-columns: 1fr; gap: 0; }
   .field.row .field { margin-bottom: 20px; }
 }
