@@ -1405,15 +1405,15 @@ form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padd
 .hero-cine-top { position: relative; flex: 1; display: flex; align-items: center; padding: 8px 0; }
 .hero-cine-bg { position: absolute; inset: 0; z-index: 0; }
 .hero-cine-bg img {
-  width: 100%; height: 100%; object-fit: cover; object-position: 50% 26%;
-  filter: brightness(.52) contrast(1.06) saturate(1.15) sepia(.28) hue-rotate(-16deg);
+  width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%;
+  filter: brightness(.74) contrast(1.04) saturate(1.12) sepia(.15) hue-rotate(-13deg);
 }
 .hero-cine-bg::after {
   content: ""; position: absolute; inset: 0;
   background:
-    linear-gradient(90deg, rgba(8,8,10,.97) 0%, rgba(8,8,10,.6) 30%, rgba(8,8,10,.35) 54%, rgba(8,8,10,.92) 100%),
-    linear-gradient(180deg, rgba(8,8,10,.55), rgba(8,8,10,.18) 34%, rgba(8,8,10,.92) 100%),
-    radial-gradient(58% 52% at 52% 40%, rgba(228,0,43,.34), transparent 72%);
+    linear-gradient(90deg, rgba(8,8,10,.95) 0%, rgba(8,8,10,.48) 26%, rgba(8,8,10,.12) 50%, rgba(8,8,10,.7) 78%, rgba(8,8,10,.9) 100%),
+    linear-gradient(180deg, rgba(8,8,10,.32), rgba(8,8,10,.02) 32%, rgba(8,8,10,.5) 72%, rgba(8,8,10,.92) 100%),
+    radial-gradient(60% 54% at 56% 30%, rgba(228,0,43,.2), transparent 72%);
 }
 .hero-cine-grid {
   position: relative; z-index: 2;
@@ -1423,7 +1423,9 @@ form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padd
 .hero-cine-left h1 {
   font-family: var(--font-display); font-weight: 400; text-transform: uppercase;
   font-size: clamp(2.9rem, 6.6vw, 5.8rem); line-height: .97; letter-spacing: .01em;
+  filter: drop-shadow(0 3px 26px rgba(0,0,0,.65));
 }
+.hero-cine-sub { text-shadow: 0 2px 16px rgba(0,0,0,.6); }
 .hero-cine-sub {
   font-family: var(--font-head); font-weight: 600;
   font-size: clamp(1rem, 1.6vw, 1.35rem); color: #fff; margin: 20px 0 0; line-height: 1.35;
