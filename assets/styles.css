@@ -644,7 +644,7 @@ body::before {
   width:55vw;height:55vw; filter:blur(30px); pointer-events:none; z-index:0;
 }
 .form-hero.body::after { background: radial-gradient(circle, rgba(228,0,43,.28), transparent 62%); }
-.form-hero.life::after { background: radial-gradient(circle, rgba(201,162,75,.24), transparent 62%); }
+.form-hero.life::after { background: radial-gradient(circle, rgba(228,0,43,.24), transparent 62%); }
 .form-hero .wrap { position: relative; z-index: 2; }
 .back-link {
   display:flex; width:fit-content; align-items:center; gap:8px;
@@ -663,7 +663,7 @@ body::before {
   max-width: 16ch;
 }
 .form-hero.body h1 .hl { color: var(--red); }
-.form-hero.life h1 .hl { color: var(--gold); }
+.form-hero.life h1 .hl { color: var(--red); }
 .form-hero .lede { color: var(--cream); font-size: 1.15rem; max-width: 46ch; margin: 20px 0 0; }
 
 /* Texte à gauche, formulaire à droite (haut aligné sur la 1re ligne du titre) */
