@@ -815,11 +815,12 @@ form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padd
   background: var(--ink);
 }
 .hero-cine-top { position: relative; flex: 1; display: flex; align-items: center; padding: 8px 0; }
-.hero-cine-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-cine-bg { position: absolute; inset: 0; z-index: 0; display: flex; align-items: center; justify-content: center; }
 .hero-cine-bg img {
-  width: 100%; height: 100%; object-fit: cover; object-position: 50% 21%;
-  transform: scale(1.04);
-  filter: brightness(.82) contrast(1.04) saturate(1.12) sepia(.12) hue-rotate(-12deg);
+  height: 116%; width: auto; max-width: none; flex: none;
+  filter: brightness(.92) contrast(1.02) saturate(.84) sepia(.14) hue-rotate(-8deg);
+  -webkit-mask-image: radial-gradient(ellipse 58% 60% at 50% 44%, #000 46%, transparent 100%);
+  mask-image: radial-gradient(ellipse 58% 60% at 50% 44%, #000 46%, transparent 100%);
 }
 .hero-cine-bg::after {
   content: ""; position: absolute; inset: 0;
@@ -1066,6 +1067,8 @@ form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padd
   .hero-cine { min-height: auto; padding-top: 96px; padding-bottom: 30px; }
   .hero-cine-top { flex-direction: column; align-items: stretch; min-height: auto; padding: 38px 0 0; }
   .hero-cine-left { text-align: center; }
+  .hero-cine-bg { align-items: flex-start; }
+  .hero-cine-bg img { height: auto; width: 132%; }
   .hero-cine-left h1 { font-size: clamp(2.4rem, 12vw, 3.6rem); }
   .pascal-card { max-width: none; margin-top: 22px; }
   .hero-video-cta { position: static; transform: none; margin: 22px auto; }
