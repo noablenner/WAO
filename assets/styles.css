@@ -815,6 +815,26 @@ form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padd
   background: var(--ink);
 }
 .hero-cine-top { position: relative; flex: 1; display: flex; align-items: center; padding: 8px 0; }
+.hero-cine-bg {
+  position: absolute; inset: 0; z-index: 0;
+  display: flex; align-items: flex-end; justify-content: center;
+  pointer-events: none;
+}
+.hero-cine-bg img {
+  height: 98%; width: auto; max-width: none; flex: none;
+  object-fit: contain;
+  transform: translateX(-4%);
+  filter: brightness(.82) contrast(1.03) saturate(.9);
+  -webkit-mask-image: radial-gradient(ellipse 58% 72% at 50% 44%, #000 46%, rgba(0,0,0,.45) 74%, transparent 100%);
+  mask-image: radial-gradient(ellipse 58% 72% at 50% 44%, #000 46%, rgba(0,0,0,.45) 74%, transparent 100%);
+}
+/* voile pour la lisibilité des textes par-dessus la photo */
+.hero-cine-bg::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, rgba(5,5,6,.88) 0%, rgba(5,5,6,.35) 26%, rgba(5,5,6,0) 46%, rgba(5,5,6,.28) 74%, rgba(5,5,6,.72) 100%),
+    linear-gradient(180deg, rgba(5,5,6,.55) 0%, rgba(5,5,6,0) 30%, rgba(5,5,6,.15) 72%, rgba(5,5,6,.85) 100%);
+}
 .hero-cine-grid {
   position: relative; z-index: 2;
   display: grid; grid-template-columns: 1fr 350px;
@@ -1052,6 +1072,8 @@ form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padd
   /* Hero ciné mobile : empilé, play au-dessus du texte */
   .hero-cine { min-height: auto; padding-top: 96px; padding-bottom: 30px; }
   .hero-cine-top { flex-direction: column; align-items: stretch; min-height: auto; padding: 38px 0 0; }
+  .hero-cine-bg { align-items: flex-start; }
+  .hero-cine-bg img { height: auto; width: 116%; transform: translateX(0); }
   .hero-cine-left { text-align: center; }
   .hero-cine-left h1 { font-size: clamp(2.4rem, 12vw, 3.6rem); }
   .pascal-card { max-width: none; margin-top: 22px; }
