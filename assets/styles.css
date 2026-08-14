@@ -1095,3 +1095,41 @@ form.wao-form .btn { width: 100%; justify-content: center; font-size: 1rem; padd
   * { animation: none !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* ============ Boutons vidéo (ex-liens -> boutons) ============ */
+.hero-play { appearance: none; -webkit-appearance: none; padding: 0; }
+.video-lock { appearance: none; -webkit-appearance: none; cursor: pointer; }
+
+/* ============ Pop-up vidéo ============ */
+body.no-scroll { overflow: hidden; }
+.video-modal { position: fixed; inset: 0; z-index: 1000; display: none; }
+.video-modal.open { display: block; }
+.video-modal-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(3,3,4,.88); backdrop-filter: blur(5px);
+  animation: vmFade .25s var(--ease);
+}
+.video-modal-dialog {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: min(92vw, 980px); animation: vmPop .3s var(--ease);
+}
+.video-modal-frame {
+  position: relative; width: 100%; aspect-ratio: 16 / 9;
+  background: #000; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 30px 90px -20px rgba(0,0,0,.85), 0 0 0 1px rgba(255,255,255,.06);
+}
+.video-modal-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-modal-close {
+  position: absolute; top: -48px; right: 0;
+  appearance: none; -webkit-appearance: none; border: 0; cursor: pointer;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,.12); color: #fff; font-size: 26px; line-height: 1;
+  display: grid; place-items: center;
+  transition: background .2s var(--ease), transform .2s var(--ease);
+}
+.video-modal-close:hover { background: var(--red); transform: scale(1.08); }
+@keyframes vmFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes vmPop { from { opacity: 0; transform: translate(-50%,-46%) scale(.97); } to { opacity: 1; transform: translate(-50%,-50%) scale(1); } }
+@media (max-width: 760px) {
+  .video-modal-close { top: -44px; }
+}

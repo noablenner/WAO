@@ -46,8 +46,8 @@
         <div class="hero-cine-left">
           <h1 class="grunge reveal">Forcer<br />votre destin</h1>
           <div class="hero-video-cta">
-            <a href="#choix" class="hero-play" aria-label="Débloquer la vidéo"></a>
-            <a href="#choix" class="video-lock"><span aria-hidden="true">🔒</span> Débloque la vidéo</a>
+            <button type="button" class="hero-play" data-video-open aria-label="Lancer la vidéo"></button>
+            <button type="button" class="video-lock" data-video-open><span aria-hidden="true">▶</span> Regarder la vidéo</button>
           </div>
           <p class="hero-cine-sub reveal d2">
             Entreprendre et réussir maintenant,<br />
@@ -289,6 +289,15 @@
       </div>
     </div>
   </footer>
+
+  <!-- Pop-up vidéo -->
+  <div class="video-modal" id="videoModal" data-youtube="2AhY8SM16Q4" aria-hidden="true">
+    <div class="video-modal-backdrop" data-video-close></div>
+    <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-label="Vidéo">
+      <button type="button" class="video-modal-close" data-video-close aria-label="Fermer la vidéo">&times;</button>
+      <div class="video-modal-frame"><!-- l'iframe est injectée au clic --></div>
+    </div>
+  </div>
 
   <script src="assets/main.js"></script>
 </body>

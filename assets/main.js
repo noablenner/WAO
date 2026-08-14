@@ -85,9 +85,44 @@
     });
   }
 
-  /* ----- Vidéo -----
-     Tant qu'elle n'est pas prête, le bouton play et l'encadré « Débloque la
-     vidéo » sont de simples ancres (#choix) gérées en HTML/CSS. */
+  /* ----- Pop-up vidéo (YouTube) ----- */
+  var modal = document.getElementById("videoModal");
+  if (modal) {
+    var frame = modal.querySelector(".video-modal-frame");
+    var ytId = modal.getAttribute("data-youtube");
+
+    var openVideo = function (e) {
+      if (e) e.preventDefault();
+      var iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube-nocookie.com/embed/" + ytId +
+        "?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+      iframe.title = "Vidéo";
+      iframe.allow = "autoplay; encrypted-media; fullscreen; picture-in-picture";
+      iframe.setAttribute("allowfullscreen", "");
+      frame.innerHTML = "";
+      frame.appendChild(iframe);
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll");
+    };
+
+    var closeVideo = function () {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("no-scroll");
+      frame.innerHTML = ""; // stoppe la lecture
+    };
+
+    document.querySelectorAll("[data-video-open]").forEach(function (btn) {
+      btn.addEventListener("click", openVideo);
+    });
+    modal.querySelectorAll("[data-video-close]").forEach(function (el) {
+      el.addEventListener("click", closeVideo);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal.classList.contains("open")) closeVideo();
+    });
+  }
 
   /* ----- Année footer ----- */
   var y = document.querySelector("[data-year]");
