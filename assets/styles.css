@@ -1133,3 +1133,25 @@ body.no-scroll { overflow: hidden; }
 @media (max-width: 760px) {
   .video-modal-close { top: -44px; }
 }
+
+/* ============ CTA raccourci vers le questionnaire ============ */
+.cta-jump { margin: clamp(16px, 3vw, 26px) 0 0; }
+.cta-band { padding: clamp(22px, 4.5vw, 40px) 0 0; text-align: center; }
+.cta-jump-btn {
+  font-size: clamp(.95rem, 1.35vw, 1.06rem);
+  padding: 16px 30px;
+  animation: ctaPulse 2.6s var(--ease) infinite;
+}
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 8px 30px -12px rgba(228,0,43,.7); }
+  50%      { box-shadow: 0 12px 42px -8px rgba(228,0,43,.95); }
+}
+/* Optimisation smartphone : CTA pleine largeur, bien visible, gros zone de tap */
+@media (max-width: 760px) {
+  .cta-jump { margin-top: 18px; }
+  .cta-jump-btn {
+    display: flex; width: 100%; justify-content: center; text-align: center;
+    padding: 18px 22px; font-size: 1.04rem;
+  }
+  .cta-band { padding-top: 26px; }
+}
